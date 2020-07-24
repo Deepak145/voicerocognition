@@ -29,10 +29,7 @@ const verifyAndSubmit = () => {
     speechSynthesis.speak(requestForConfirmation);
     requestForConfirmation.onend = () => {
             const recog = new webkitSpeechRecognition();
-            recog.continuous = true;
-            recog.lang = 'en-US';
             recog.interimResults = true;
-            recog.maxAlternatives = 1;
             recog.addEventListener('result', e => {
             const transcript = Array.from(e.results)
                 .map(result => result[0])
@@ -72,7 +69,7 @@ const getSpeechRecogniser = (elementId)=>{
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
     recognition.lang = 'en-US';
-    recognition.interimResults = true;
+    recognition.interimResults = false;
     recognition.maxAlternatives = 1;
     recognition.addEventListener('result', e => {
         const transcript = Array.from(e.results)
