@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(voiceController());
+            });
+        </script>
+        <link rel="stylesheet" type="text/css"href="directv.css">
+        <title>directv</title>
+    </head>
+
+    <body>
+        <ul>
+            <li><a href="/index.html">Register</a></li>
+            <li><a href="/login.html">Login</a></li>
+        </ul>
+        <div class="form-style-6">
+        <h1>Directv Speech Recognition App</h1>
+    
+        <form method="GET" action='/home.html'>
+            <div>
+                <input class= "userid" type="number" name="userid" placeholder="User ID" />
+            </div>
+            <div>           
+                <input class ="password" type="text" name="password" placeholder="Password"/>
+            </div>
+            <div>
+                <input class = "submit" type="submit" value="Login" />
+            </div>
+        </form>
+    </div>    
+    <script src="/login.js" charset="utf-8"></script>
+    </body>
+</html>
